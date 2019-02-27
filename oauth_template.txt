@@ -1,4 +1,6 @@
-# twitter-ml.py
+# twitter-ml.txt
+# template coming from https://github.com/joestump/python-oauth2/wiki/Signing-A-Request
+# no worries; keys/secrets have since been reset through https://developer.twitter.com/en/apps
 
 import oauth2 as oauth
 import time
