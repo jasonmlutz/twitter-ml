@@ -1,0 +1,23 @@
+# twitter-ml.py
+
+import oauth2 as oauth
+import time
+
+# Set the API endpoint
+url = "https://api.twitter.com/1.1/search/tweets.json"
+
+params = {
+    'oauth_version': "1.0",
+    'oauth_nonce': oauth.generate_nonce(),
+    'oauth_timestamp': str(int(time.time())),
+    'user': 'joestump',
+    'photoid': 555555555555
+}
+
+# Set up instances of our Token and Consumer.
+token = oauth.Token(key="2559564175-21ffPSugo650WT4Q60vSFSLNkGlWBWDlv27LZ1a", secret="oAuwPN2Hg0uvKuoWVk9hsGyoYcH9AtlnU8QEEYt8LAoYd")
+consumer = oauth.Consumer(key="LPoyLTh833Ht7O8HJTv1FJ8VK", secret="Z1uGTSUnXRqQ08NA2S9rVR9ACaYqo9Q95legHemu1XqUZOnp1F")
+
+# Set our token/key parameters
+params['oauth_token'] = token.key
+params['oauth_consumer_key'] = consumer.key
