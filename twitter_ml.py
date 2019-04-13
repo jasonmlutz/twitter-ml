@@ -14,4 +14,5 @@ def oauth_twitter_search(query, consumer_key=CONSUMER_KEY, consumer_secret=CONSU
     tweets = json.loads(data)
     return tweets
 
-a = oauth_twitter_search("nasa")
+nasa_tweets = oauth_twitter_search("@nasa")
+control_tweets = oauth_twitter_search("the")
